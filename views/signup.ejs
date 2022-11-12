@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/fontawesome-free-5.14.0-web/css/all.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/sup.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>EyeReport|Sign-Up</title>
+</head>
+<body>
+    
+    <%- include('./messages') -%>
+        
+    <form action="/api/users/signup" method="POST">
+        <div class="col-md-12 col-xs-12">
+            <div class="white-box">
+                <form class="form-horizontal form-material">
+
+                    <h1 class="ml-2 mt-1 ">Sign up</h1>
+                    <div class="form-group">
+                        <label class="col-md-12 ">Full Name</label>
+                        <div class="col-md-12 ">
+                            <input type="text" name="name" placeholder="Johnathan Doe" class="form-control form-control-line" required> </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12">Phone No</label>
+                        <div class="col-md-12">
+                            <input type="text" name="phonenumber" placeholder="123 456 7890" class="form-control form-control-line"  required> </div>
+                    </div>
+                  
+                    <div class="form-group">
+                        <label for="example-email" class="col-md-12">Email</label>
+                        <div class="col-md-12">
+                            <input type="email" name="email" placeholder="johnathan@user.com" class="form-control form-control-line" name="example-email" id="example-email" required> </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12">Password</label>
+                        <div class="col-md-12">
+                            <input type="password" name="password"  class="form-control form-control-line" requierd> </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12">Confirm Password</label>
+                        <div class="col-md-12">
+                            <input type="password" name="confirmpassword"  class="form-control form-control-line" required> </div>
+                    </div>
+                  
+                  
+                  
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <button type="submit" class="btn btn-success float-right">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </form>
+        
+    <script src="/js/jquery_3.3.1.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
+
+   <script>
+        $().ready(function () {
+            setTimeout(function () {
+              $('.time-go').slideUp(900);
+            }, 5000)
+          });
+        </script>
+  
+</body>
+</html>

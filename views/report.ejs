@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EyeReport|Report</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/fontawesome-free-5.14.0-web/css/all.min.css">
+    <link rel="stylesheet" href="/css/style1.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+   
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <p class="navbar-brand" href="#"><img src="/images/kisspng-north-alabama-eye-care-vector-graphics-logo-image-5c03038fea1a92.0887709315437013919589.png" alt=""> EyeReport</p>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                  <a class="nav-link" href="/api/users/index">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/api/users/blog">Blog</a>
+                </li>
+               
+               </ul>
+              
+            </div>
+        </div>
+      </nav>
+      <%- include('./messages') -%>
+    
+    
+  <div class="body">
+    <div class="container float-right " >
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card mt-5 mb-5" style="max-width: 50rem; height: 400px;">
+            <div class="card-body">
+              <h5 class="card-title">Be a lifesaver By Reporting Crimes.</h5>
+              
+              <form action="/api/users/report" method="POST">
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Location Of The Crime</label>
+                  <input type="text" name="location" placeholder="location" class="form-control form-control-line" required> </div>
+                </div>
+              
+                <div class="form-group ">
+                    <div class="col-md-12">
+                        <label for="exampleFormControlInput1" >What's the problem?</label>
+                        <textarea rows="5" name="report" class="form-control form-control-line mb-3" placeholder="type here..." required></textarea>
+                    </div>
+                    <button  onclick="getLocation()" class="ml-3 btn btn-success">Send</button>
+           
+                </div>
+                <div class="form-group d-none">
+                  
+                  <textarea id="demo" rows="5" name="latitude" class="form-control form-control-line mb-3"  required></textarea>
+                 
+                </div>
+                <div class="form-group d-none">
+                  
+                  <textarea id="demo" rows="5" name="longitude" class="form-control form-control-line mb-3" required></textarea>
+                 
+                </div>
+  
+  
+                
+              </form>
+             
+             
+            </div>
+
+        </div>
+      </div>
+         
+        </div>
+     </div>
+  </div>
+    
+        
+
+        <!-- <footer id="main-footer">
+            <div class="container">
+              <div class="row">
+                <div class="col text-center ">
+                  <div class="py-4 mb-4">
+                  
+            &copy;EyeReport.All Right Reserved. <br>
+          
+            <button type="button" class="btn btn-light mt" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Send your Feedback!</button>
+            
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Feedback</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      
+                      <div class="form-group">
+                        <label for="message-text" class="col-form-label">Message:</label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-dark">Send feedback</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+                  </div>
+                </div>
+              </div>
+            </div>  
+          
+          </footer> -->
+
+      
+
+
+           
+            
+            <script src="/js/jquery_3.3.1.js"></script>
+            <script src="/js/popper.min.js"></script>
+            <script src="/js/bootstrap.js"></script>
+            <script src="/js/eyereport.js"></script>
+            <script>
+                $().ready(function () {
+                  setTimeout(function () {
+                    $('.time-go').slideUp(100);
+                  }, 1000)
+                });
+
+
+
+
+                
+              </script>  
+   
+</body>
+</html>
